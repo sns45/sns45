@@ -12,6 +12,8 @@ I lead backend and platform work at **Compass** on systems that power lead gener
 
 **[forgeseal](https://github.com/sns45/forgeseal)** — Supply-chain security toolkit for JS/TS, Python, Go, Rust, and Java/Gradle projects. Generates CycloneDX SBOMs from 13 lockfile formats, signs with Sigstore (keyless), produces SLSA provenance attestations, and manages OpenVEX documents. Built for EU Cyber Resilience Act (CRA) compliance.
 
+**[svidmint](https://github.com/sns45/svidmint)** — SPIFFE-compatible workload identity for serverless and edge. Issues X.509 and JWT SVIDs to Lambda, Cloudflare Workers, GitHub Actions, and Deno Deploy via platform-native attestation (STS, Access JWTs, OIDC). The Go SDK is a drop-in replacement for `go-spiffe/v2`'s `workloadapi.NewX509Source()`; the TypeScript SDK runs in Workers via `crypto.subtle`. Federates with SPIRE through standard bundle exchange. If forgeseal is identity for the artifact, svidmint is identity for the runtime.
+
 **[auth-gateway](https://github.com/sns45/auth-gateway)** — Serverless OAuth gateway on Cloudflare Workers with Convex, Better-Auth, and Hono middleware. KV-cached sessions cut service-onboarding time.
 
 **[anyq](https://github.com/sns45/anyq)** — Universal message queue library with a single interface across Redis Streams, SQS/SNS, Pub/Sub, Kafka, RabbitMQ, NATS, and Azure Service Bus. TypeScript-first, with DLQ and circuit breaker built in.
