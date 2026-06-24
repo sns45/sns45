@@ -8,7 +8,11 @@ I lead backend and platform work at **Compass** on systems that power lead gener
 
 ## Selected Open Source
 
+### Agentic developer tooling
+
 **[better-call-claude](https://github.com/sns45/better-call-claude)** — MCP server giving Claude Code bi-directional voice, SMS, and WhatsApp communication, with **cross-channel context sharing** so a conversation can start on a phone call and continue over SMS or WhatsApp. Call Claude from your phone; get callbacks when it needs input.
+
+**[dear-claude](https://github.com/sns45/dear-claude)** — Webhook-driven MCP integrations connecting Claude Code to GitHub, Linear, Jira, Notion, and Obsidian.
 
 ### Zero-trust supply-chain trilogy
 
@@ -20,11 +24,11 @@ Three tools that compose into a supply chain that verifies itself: **forgeseal**
 
 **[assayward](https://github.com/sns45/assayward)** — Runtime trust gate that evaluates supply-chain attestations and workload identities against a declarative policy, returning an explainable allow / deny / audit decision at the moment a workload is admitted. A single pure, deterministic Go core compiles to a CLI, a Wasm module, an npm package, a Kubernetes admission webhook, and a GitHub Action, with signature verification in both keyed offline and keyless (Fulcio + Rekor) modes. It consumes forgeseal's attestations and svidmint's identities, and refuses to take a signature at its word. A signature says it was signed; assayward says whether to open the door.
 
+### Backend & infrastructure
+
 **[auth-gateway](https://github.com/sns45/auth-gateway)** — Serverless OAuth gateway on Cloudflare Workers with Convex, Better-Auth, and Hono middleware. KV-cached sessions cut service-onboarding time.
 
 **[anyq](https://github.com/sns45/anyq)** — Universal message queue library with a single interface across Redis Streams, SQS/SNS, Pub/Sub, Kafka, RabbitMQ, NATS, and Azure Service Bus. TypeScript-first, with DLQ and circuit breaker built in.
-
-**[dear-claude](https://github.com/sns45/dear-claude)** — Webhook-driven MCP integrations connecting Claude Code to GitHub, Linear, Jira, Notion, and Obsidian.
 
 ## Professional Background
 
