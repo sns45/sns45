@@ -14,6 +14,8 @@ I lead backend and platform work at **Compass** on systems that power lead gener
 
 **[dear-claude](https://github.com/sns45/dear-claude)** — Webhook-driven MCP integrations connecting Claude Code to GitHub, Linear, Jira, Notion, and Obsidian.
 
+**[TicketTok](https://github.com/sns45/tickettok-releases)** — Terminal dashboard for running many Claude Code, Codex, and Gemini agents at once, each in its own tmux session, that doubles as a full Neovim-based IDE for reviewing agent code changes inline over the Claude Code MCP protocol. Live status detection via Claude Code lifecycle hooks; distributed through a Homebrew tap and GoReleaser.
+
 ### Zero-trust supply-chain trilogy
 
 Three tools that compose into a supply chain that verifies itself: **forgeseal** proves *what* is running, **svidmint** proves *who* is running it, and **assayward** decides *whether to let it run*. The three gate each other's releases end to end on real CI, keyed and keyless signature modes, no human in the loop.
