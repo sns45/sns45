@@ -26,6 +26,12 @@ Three tools that compose into a supply chain that verifies itself: **forgeseal**
 
 **[assayward](https://github.com/sns45/assayward)** — Runtime trust gate that evaluates supply-chain attestations and workload identities against a declarative policy, returning an explainable allow / deny / audit decision at the moment a workload is admitted. A single pure, deterministic Go core compiles to a CLI, a Wasm module, an npm package, a Kubernetes admission webhook, and a GitHub Action, with signature verification in both keyed offline and keyless (Fulcio + Rekor) modes. It consumes forgeseal's attestations and svidmint's identities, and refuses to take a signature at its word. A signature says it was signed; assayward says whether to open the door.
 
+### Act II: provenance for the agent's tools
+
+The trilogy verifies containers and workloads; **smithmark** extends the same discipline to a new artifact class, the tools the agents themselves wield. It produces the maker's mark; assayward is the gate that consumes it. The trilogy verifies the mark; the mark verifies the agent's tools.
+
+**[smithmark](https://github.com/sns45/smithmark)** — Signed capability attestations for MCP servers and skills. Extracts an artifact's real surface (declared tools, network egress, filesystem, exec, environment, and secrets) into a schema-validated **capability manifest**, wraps it as a portable **in-toto DSSE** predicate, and signs it **keyless with Sigstore** (Fulcio certificate, Rekor transparency log). It **composes** npm provenance, SLSA, and CycloneDX rather than minting a new trust root, adds a heuristic **capability lint** for undeclared reach, and emits an explainable report that the assayward gate admits on. The agentic-tooling MCP servers above now ship this mark on every release, verified end to end with **cosign** including Rekor inclusion. Ships two upstream standards drafts: a CycloneDX agent-capability taxonomy (Ecma TC54) and an MCP Registry provenance RFC.
+
 ### Backend & infrastructure
 
 **[auth-gateway](https://github.com/sns45/auth-gateway)** — Serverless OAuth gateway on Cloudflare Workers with Convex, Better-Auth, and Hono middleware. KV-cached sessions cut service-onboarding time.
@@ -46,7 +52,7 @@ M.S. Software Engineering, New Jersey Institute of Technology. B.E. Computer Sci
 
 ## Current Focus
 
-Model Context Protocol servers, agentic developer tooling, event-driven architecture on Kubernetes, and ML recommendation systems.
+Model Context Protocol servers and agent supply-chain provenance, agentic developer tooling, event-driven architecture on Kubernetes, and ML recommendation systems.
 
 ## Contact
 
