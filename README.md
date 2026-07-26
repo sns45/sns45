@@ -38,6 +38,8 @@ The trilogy verifies containers and workloads; **smithmark** extends the same di
 
 **[anyq](https://github.com/sns45/anyq)** — Universal message queue library with a single interface across Redis Streams, SQS/SNS, Pub/Sub, Kafka, RabbitMQ, NATS, and Azure Service Bus. TypeScript-first, with DLQ and circuit breaker built in.
 
+**[anyhook](https://github.com/sns45/anyhook)** — Edge-native outbound webhook delivery engine, wire-compatible with the Standard Webhooks signing spec. Signs an event once, fans it out to every subscribed endpoint, then retries with jittered backoff, circuit-breaks dead endpoints, dead-letters, and replays each delivery, running inside a Cloudflare Worker (Durable Objects) or an AWS Lambda (SQS, DynamoDB) with no server and no database. Composes anyq as its transport; the first open-source webhook delivery engine to run natively on serverless and edge runtimes.
+
 ## Professional Background
 
 **Compass** — Senior Software Engineer (2023 to present), Software Engineer II (2021 to 2023). Built the data pipeline and database infrastructure behind Compass's Likely-to-Sell ML model, which has contributed over **$150MM in incremental revenue since 2021**. Delivered the Likely-to-Win model infrastructure; A/B tests showed a **39% lift in outreach** on new recommendations and a **16% lift** on re-ranked ones. Architected MCP-compliant APIs that integrate **100+ real-estate data sources** into Compass CRM, processing millions of contacts. Leading an **eight-engineer team across four time zones**; work catalyzed **$2M+ quarterly GCI**. Received the *Avengers team player* award in 2022.
