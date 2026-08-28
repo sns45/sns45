@@ -34,7 +34,7 @@ The trilogy verifies containers and workloads; **smithmark** extends the same di
 
 ### Backend & infrastructure
 
-**[auth-gateway](https://github.com/sns45/auth-gateway)** — Serverless OAuth gateway on Cloudflare Workers with Convex, Better-Auth, and Hono middleware. KV-cached sessions cut service-onboarding time.
+**[auth-gateway](https://github.com/sns45/auth-gateway)** — Google sign-in for many sites on Cloudflare Workers, with Better Auth and Hono. Sessions live in D1 with **no eventually-consistent cache in the read path**, so a revoked session is rejected on the very next request, and one Durable Object per user pushes that to every open tab. A new site integrates in two lines: a script tag and a subscribe call.
 
 **[anyq](https://github.com/sns45/anyq)** — Universal message queue library with a single interface across Redis Streams, SQS/SNS, Pub/Sub, Kafka, RabbitMQ, NATS, and Azure Service Bus. TypeScript-first, with DLQ and circuit breaker built in.
 
