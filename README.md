@@ -14,6 +14,8 @@ I lead backend and platform work at **Compass** on systems that power lead gener
 
 **[dear-claude](https://github.com/sns45/dear-claude)** — Webhook-driven MCP integrations connecting Claude Code to GitHub, Linear, Jira, Notion, and Obsidian.
 
+**[greplost](https://github.com/sns45/greplost)** — A committed, deterministic map of a codebase for humans and coding agents: Markdown, ASCII trees, Mermaid diagrams, and JSONL graphs derived from tree-sitter across TypeScript and Go, with no LLM anywhere in the structure layer, so two builds of one commit differ by zero bytes. `greplost verify` rebuilds the map in memory and exits non-zero on drift, which turns staleness into **a red build rather than a discovery**. Ships as a CLI and a Claude Code plugin (session hooks, six slash commands, a read-only navigator agent), with a benchmark harness that scores it against Graphify and code-review-graph on compiler truth (Understand-Anything ships no headless entry point to run) and publishes the losses.
+
 **[TicketTok](https://github.com/sns45/tickettok-releases)** — Terminal dashboard for running many Claude Code, Codex, and Gemini agents at once, each in its own tmux session, that doubles as a full Neovim-based IDE for reviewing agent code changes inline over the Claude Code MCP protocol. Live status detection via Claude Code lifecycle hooks; distributed through a Homebrew tap and GoReleaser.
 
 ### Zero-trust supply-chain trilogy
